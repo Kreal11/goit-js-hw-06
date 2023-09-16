@@ -6,7 +6,7 @@ const checkInfo = (event) => {
     const email = form.elements.email.value;
     const password = form.elements.password.value;
     
-    if (email === "" || password === "") {
+    if (email === '' || password === '') {
         return alert('Всі поля повинні бути заповнені!');
     }
 
