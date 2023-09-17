@@ -15,17 +15,18 @@ btnDestroy.addEventListener('click', destroyBoxes)
 function createBoxes() {
   const amount = Number(input.value);
   let boxSize = 30;
-  // let newDivArray = [];
+  let newDivArray = [];
   for (let i = 0; i < amount; i += 1) {
     const box = document.createElement('div');
     box.style.backgroundColor = getRandomHexColor();
     box.style.width = `${boxSize}px`;
     box.style.height = `${boxSize}px`;
-    divCollection.append(box);
+    newDivArray.push(box);
+    // divCollection.append(box);
     boxSize += 10;
   }
   // const divs = newDivArray.map(div => div).join('');
-  // divCollection.insertAdjacentHTML('afterbegin', divs);
+  divCollection.append(...newDivArray);
 }
 
 function destroyBoxes() {
