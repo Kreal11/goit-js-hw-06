@@ -15,7 +15,7 @@ btnDestroy.addEventListener('click', destroyBoxes)
 function createBoxes() {
   const amount = Number(input.value);
   let boxSize = 30;
-  let newDivArray = [];
+  // let newDivArray = [];
   for (let i = 0; i < amount; i += 1) {
     const box = document.createElement('div');
     box.style.backgroundColor = getRandomHexColor();
